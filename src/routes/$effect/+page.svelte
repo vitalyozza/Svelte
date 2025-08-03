@@ -9,11 +9,15 @@
     }
 
     let decrease = () => {
-        size-=10;
+        if (size != 50) {
+            size-=10;
+        } else {
+            this.reset()
+        }
     }
 
     let reset = () => {
-        size=0
+        size=50
     }
 
 	$effect(() => {
@@ -44,8 +48,6 @@
 
 <h3>Example with canvas</h3>
 
-<canvas bind:this={canvas}></canvas>
-
 <button onclick={() => decrease()}>
 -
 </button>
@@ -57,6 +59,8 @@
 <button onclick={() => reset()}>
 reset
 </button>
+<br>
+<canvas bind:this={canvas} width={size*2} height={size+size/2}></canvas>
 
 <hr>
 
