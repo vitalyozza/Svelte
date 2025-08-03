@@ -25,10 +25,10 @@
 			done: false,
 			title: title
 		});
-	};
+	}; 
 
 	class Todo {
-		clicks = $state(0);
+		clicks = $state(0); 
 		done = $state(false);
 		hidden = $state(false);
 
